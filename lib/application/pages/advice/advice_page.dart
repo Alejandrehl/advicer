@@ -27,14 +27,15 @@ class AdvicePage extends StatelessWidget {
           ),
         ],
       ),
-      body: Container(
-        width: double.infinity,
+      body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 50.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: const [
-            CustomButton(),
+            Expanded(child: Placeholder()),
+            SizedBox(
+              height: 200,
+              child: Center(child: CustomButton()),
+            ),
           ],
         ),
       ),
