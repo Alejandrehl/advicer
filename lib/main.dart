@@ -2,7 +2,7 @@ import 'package:advicer/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'application/theme_service.dart';
+import 'application/core/services/theme_service.dart';
 
 void main() {
   runApp(ChangeNotifierProvider(
