@@ -7,6 +7,25 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final themeData = Theme.of(context);
 
-    return Container();
+    return InkResponse(
+      onTap: () {},
+      child: Material(
+        elevation: 20.0,
+        borderRadius: BorderRadius.circular(15.0),
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15.0),
+            color: themeData.colorScheme.secondary,
+          ),
+          child: const Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: 10.0,
+              vertical: 15.0,
+            ),
+            child: Text('Get Advice'),
+          ),
+        ),
+      ),
+    );
   }
 }

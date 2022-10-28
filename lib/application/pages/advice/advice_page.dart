@@ -1,4 +1,5 @@
 import 'package:advicer/application/core/services/theme_service.dart';
+import 'package:advicer/application/pages/advice/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -29,7 +30,9 @@ class AdvicePage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 50.0),
         child: Column(
-          children: [],
+          children: const [
+            CustomButton(),
+          ],
         ),
       ),
     );
