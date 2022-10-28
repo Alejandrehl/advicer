@@ -30,11 +30,21 @@ class AdvicePage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 50.0),
         child: Column(
-          children: const [
-            Expanded(child: Placeholder()),
-            SizedBox(
+          children: [
+            Expanded(
+              child: Center(
+                child: Text(
+                  'Your advice is waiting for you!',
+                  style: themeData.textTheme.headline1,
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ),
+            const SizedBox(
               height: 200,
-              child: Center(child: CustomButton()),
+              child: Center(
+                child: CustomButton(),
+              ),
             ),
           ],
         ),
