@@ -8,7 +8,7 @@ class CustomButton extends StatelessWidget {
     final themeData = Theme.of(context);
 
     return InkResponse(
-      onTap: () {},
+      onTap: () => print('Button pressed - will be implemented later'),
       child: Material(
         elevation: 20.0,
         borderRadius: BorderRadius.circular(15.0),
