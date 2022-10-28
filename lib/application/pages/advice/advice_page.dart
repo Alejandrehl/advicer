@@ -1,4 +1,5 @@
 import 'package:advicer/application/core/services/theme_service.dart';
+import 'package:advicer/application/pages/advice/widgets/advice_field.dart';
 import 'package:advicer/application/pages/advice/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -30,17 +31,13 @@ class AdvicePage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 50.0),
         child: Column(
-          children: [
+          children: const [
             Expanded(
               child: Center(
-                child: Text(
-                  'Your advice is waiting for you!',
-                  style: themeData.textTheme.headline1,
-                  textAlign: TextAlign.center,
-                ),
+                child: AdviceField(advice: 'Your advice is waiting for you!'),
               ),
             ),
-            const SizedBox(
+            SizedBox(
               height: 200,
               child: Center(
                 child: CustomButton(),
