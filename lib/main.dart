@@ -17,14 +17,17 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<ThemeService>(builder: (_, themeService, __) {
-      return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        themeMode: themeService.isDarkModeOn ? ThemeMode.dark : ThemeMode.light,
-        theme: AppTheme.lightTheme,
-        darkTheme: AppTheme.darkTheme,
-        home: const AdvicePage(),
-      );
-    });
+    return Consumer<ThemeService>(
+      builder: (_, themeService, __) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          themeMode:
+              themeService.isDarkModeOn ? ThemeMode.dark : ThemeMode.light,
+          theme: AppTheme.lightTheme,
+          darkTheme: AppTheme.darkTheme,
+          home: const AdvicePage(),
+        );
+      },
+    );
   }
 }

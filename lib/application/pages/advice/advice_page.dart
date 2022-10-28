@@ -26,6 +26,12 @@ class AdvicePage extends StatelessWidget {
           ),
         ],
       ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 50.0),
+        child: Column(
+          children: [],
+        ),
+      ),
     );
   }
 }
