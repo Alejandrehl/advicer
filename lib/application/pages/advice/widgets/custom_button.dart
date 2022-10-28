@@ -17,12 +17,15 @@ class CustomButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(15.0),
             color: themeData.colorScheme.secondary,
           ),
-          child: const Padding(
-            padding: EdgeInsets.symmetric(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(
               horizontal: 10.0,
               vertical: 15.0,
             ),
-            child: Text('Get Advice'),
+            child: Text(
+              'Get Advice',
+              style: themeData.textTheme.headline1,
+            ),
           ),
         ),
       ),
