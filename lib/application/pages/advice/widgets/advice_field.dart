@@ -28,6 +28,7 @@ class AdviceField extends StatelessWidget {
           child: Text(
             advice,
             style: themeData.textTheme.bodyText1,
+            textAlign: TextAlign.center,
           ),
         ),
       ),
