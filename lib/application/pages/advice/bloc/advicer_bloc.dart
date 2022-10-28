@@ -6,8 +6,8 @@ part 'advicer_state.dart';
 
 class AdvicerBloc extends Bloc<AdvicerEvent, AdvicerState> {
   AdvicerBloc() : super(AdvicerInitial()) {
-    on<AdvicerEvent>((event, emit) {
-      // TODO: implement event handler
+    on<AdviceRequestEvent>((event, emit) {
+      emit(AdvicerStateLoading());
     });
   }
 }
