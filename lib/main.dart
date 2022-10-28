@@ -1,7 +1,14 @@
+import 'package:advicer/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'application/theme_service.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ChangeNotifierProvider(
+    create: (context) => ThemeService(),
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -9,11 +16,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Advicer',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-    );
+    return Consumer<ThemeService>(builder: (_, themeService, __) {
+      return MaterialApp(
+        themeMode: themeService.isDarkModeOn ? ThemeMode.dark : ThemeMode.light,
+        theme: AppTheme.lightTheme,
+        darkTheme: AppTheme.darkTheme,
+        home: const Placeholder(),
+      );
+    });
   }
 }
