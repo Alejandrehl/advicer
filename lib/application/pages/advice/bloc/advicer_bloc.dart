@@ -6,8 +6,15 @@ part 'advicer_state.dart';
 
 class AdvicerBloc extends Bloc<AdvicerEvent, AdvicerState> {
   AdvicerBloc() : super(AdvicerInitial()) {
-    on<AdviceRequestEvent>((event, emit) {
+    on<AdviceRequestEvent>((event, emit) async {
       emit(AdvicerStateLoading());
+      // Execute business logic
+      // For example get an advice
+      debugPrint('Fake Advice Triggered');
+      await Future.delayed(const Duration(seconds: 3));
+      debugPrint('Got advice');
+
+      emit(AdvicerStateLoaded(advice: 'Fake advice to test BLoC'));
     });
   }
 }
