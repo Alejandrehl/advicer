@@ -17,9 +17,8 @@ class AdvicerCubit extends Cubit<AdvicerCubitState> {
     final failureOrAdvice = await adviceUseCases.getAdvice();
 
     failureOrAdvice.fold(
-      (failure) => emit(AdvicerStateError(
-        message: _mapFailureToMessage(failure),
-      )),
+      (failure) =>
+          emit(AdvicerStateError(message: _mapFailureToMessage(failure))),
       (advice) => emit(AdvicerStateLoaded(advice: advice.advice)),
     );
   }
