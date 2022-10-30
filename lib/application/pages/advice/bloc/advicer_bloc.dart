@@ -16,7 +16,7 @@ class AdvicerBloc extends Bloc<AdvicerEvent, AdvicerState> {
 
       final advice = await adviceUseCases.getAdvice();
 
-      emit(AdvicerStateLoaded(advice: advice));
+      emit(AdvicerStateLoaded(advice: advice.advice));
     });
   }
 }

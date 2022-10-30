@@ -1,6 +1,12 @@
+import 'package:advicer/domain/entities/advice_entity.dart';
+
 class AdviceUseCases {
-  Future<String> getAdvice() async {
+  Future<AdviceEntity> getAdvice() async {
     await Future.delayed(const Duration(seconds: 3));
-    return "Fake advice to test";
+
+    return const AdviceEntity(
+      advice: 'Advice to test!',
+      id: 1,
+    );
   }
 }
