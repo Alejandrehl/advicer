@@ -1,3 +1,4 @@
+import 'package:advicer/domain/usecases/advice_usecases.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -6,12 +7,13 @@ part 'advicer_state.dart';
 
 class AdvicerCubit extends Cubit<AdvicerCubitState> {
   AdvicerCubit() : super(AdvicerInitial());
+  final adviceUseCases = AdviceUseCases();
 
   void adviceRequested() async {
     emit(AdvicerStateLoading());
 
-    await Future.delayed(const Duration(seconds: 3));
+    final advice = await adviceUseCases.getAdvice();
 
-    emit(AdvicerStateLoaded(advice: 'Fake advice to test BLoC'));
+    emit(AdvicerStateLoaded(advice: advice));
   }
 }
