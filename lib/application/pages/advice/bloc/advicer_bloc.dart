@@ -8,6 +8,10 @@ import '../../../../domain/usecases/advice_usecases.dart';
 part 'advicer_event.dart';
 part 'advicer_state.dart';
 
+const generalFailureMessage = 'Ups, something gone wrong. Please try again.';
+const serverFailureMessage = 'Ups, API Error, please try again';
+const cacheFailureMessage = 'Ups, cache failed. Please try again.';
+
 class AdvicerBloc extends Bloc<AdvicerEvent, AdvicerState> {
   final adviceUseCases = AdviceUseCases();
 
@@ -28,11 +32,11 @@ class AdvicerBloc extends Bloc<AdvicerEvent, AdvicerState> {
   String _mapFailureToMessage(Failure failure) {
     switch (failure.runtimeType) {
       case ServerFailure:
-        return 'Ups, API Error, please try again';
+        return serverFailureMessage;
       case CacheFailure:
-        return 'Ups, cache failed. Please try again.';
+        return cacheFailureMessage;
       default:
-        return 'Ups, something gone wrong. Please try again.';
+        return generalFailureMessage;
     }
   }
 }
