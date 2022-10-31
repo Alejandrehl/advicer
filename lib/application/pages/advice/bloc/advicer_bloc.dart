@@ -13,9 +13,11 @@ const serverFailureMessage = 'Ups, API Error, please try again';
 const cacheFailureMessage = 'Ups, cache failed. Please try again.';
 
 class AdvicerBloc extends Bloc<AdvicerEvent, AdvicerState> {
-  final adviceUseCases = AdviceUseCases();
+  final AdviceUseCases adviceUseCases;
 
-  AdvicerBloc() : super(AdvicerInitial()) {
+  AdvicerBloc({
+    required this.adviceUseCases,
+  }) : super(AdvicerInitial()) {
     on<AdviceRequestEvent>((event, emit) async {
       emit(AdvicerStateLoading());
 

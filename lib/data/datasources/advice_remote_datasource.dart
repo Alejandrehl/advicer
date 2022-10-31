@@ -7,18 +7,15 @@ abstract class AdviceRemoteDatasource {
 }
 
 class AdviceRemoteDatasourceImpl implements AdviceRemoteDatasource {
-  final _dio = Dio();
+  final Dio dio;
 
-  AdviceRemoteDatasourceImpl() {
-    _dio.options.baseUrl = 'https://api.flutter-community.com/api/v1';
-    _dio.options.headers = {
-      'content-type': 'application/json',
-    };
-  }
+  AdviceRemoteDatasourceImpl({
+    required this.dio,
+  });
 
   @override
   Future<AdviceModel> getRandomAdviceFromApi() async {
-    final response = await _dio.get('/advice');
+    final response = await dio.get('/advice');
 
     if (response.statusCode != 200) {
       throw ServerException();

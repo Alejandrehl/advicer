@@ -9,3 +9,4 @@ Flutter, BLoC and Clean Architecture.
 3. [Equatable](https://pub.dev/packages/equatable)
 4. [Dartz](https://pub.dev/packages/dartz)
 5. [DIO](https://pub.dev/packages/dio)
+6. [Get it](https://pub.dev/packages/get_it)
