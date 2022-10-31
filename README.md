@@ -10,6 +10,7 @@ Flutter, BLoC and Clean Architecture.
 4. [Dartz](https://pub.dev/packages/dartz)
 5. [DIO](https://pub.dev/packages/dio)
 6. [Get it](https://pub.dev/packages/get_it)
+7. [Test](https://pub.dev/packages/test)
 
 ## Flutter Testing
 
