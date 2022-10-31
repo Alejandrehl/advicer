@@ -26,14 +26,21 @@ Flutter, BLoC and Clean Architecture.
         1. Make a deposit of your banking account
         2. Create an account of your social media app
         3. Helpful link: [https://docs.flutter.dev/cookbook/testing/integration/introduction](https://docs.flutter.dev/cookbook/testing/integration/introduction)
-  2. UI(golden/widget tests):
-     1. Medium amount of test
+  2. UI Golden Tests:
+     1. Medium amount of tests
      2. Compares the current UI of your app with a defined image of this UI
      3. Not so hard to write and medium execution time
      4. Examples:
         1. Are all button state being as we expect them
      5. Helpful link 1: [https://verygood.ventures/blog/alchemist-golden-tests-tutorial](https://verygood.ventures/blog/alchemist-golden-tests-tutorial)
      6. Helpful link 2: [https://medium.com/flutter-community/flutter-golden-tests-common-widgets-with-snapshots-27f83f266cea](https://medium.com/flutter-community/flutter-golden-tests-common-widgets-with-snapshots-27f83f266cea)
-  3. Business Logic(Unit/BLoC)
+  3. UI Widget Tests:
+     1. Medium amount of tests
+     2. Tests a UI component and the different states of it without business logic
+     3. Not so hard to write and medium execution time
+     4. Examples:
+        1. Shows my UI a reloading spinner after a pull to refresh
+     5. Helpful links: [https://docs.flutter.dev/cookbook/testing/widget/introduction](https://docs.flutter.dev/cookbook/testing/widget/introduction)
+  4. Business Logic(Unit/BLoC)
 
 ### Which kind of tests are available in flutter?
