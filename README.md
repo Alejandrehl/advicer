@@ -13,10 +13,6 @@ Flutter, BLoC and Clean Architecture.
 
 ## Flutter Testing
 
-### Why do we write tests?
-
-### Why should we test?
-
 - Talk with your team and define your own testing pyramid, for example: Quantity of tests from high(bottom) to low(top).
   1. Integration:
      1. Low amount of tests
@@ -40,7 +36,13 @@ Flutter, BLoC and Clean Architecture.
      3. Not so hard to write and medium execution time
      4. Examples:
         1. Shows my UI a reloading spinner after a pull to refresh
-     5. Helpful links: [https://docs.flutter.dev/cookbook/testing/widget/introduction](https://docs.flutter.dev/cookbook/testing/widget/introduction)
-  4. Business Logic(Unit/BLoC)
-
-### Which kind of tests are available in flutter?
+     5. Helpful link: [https://docs.flutter.dev/cookbook/testing/widget/introduction](https://docs.flutter.dev/cookbook/testing/widget/introduction)
+  4. Business Logic(Unit/BLoC):
+     1. High amount of tests
+     2. Tests only one specific case of your app
+     3. Easy to write and fast execution time
+     4. Examples:
+        1. BLoC/Cubit tests (business logic)
+        2. Utility functions
+        3. Helpful link 1: [https://docs.flutter.dev/cookbook/testing/unit/introduction](https://docs.flutter.dev/cookbook/testing/unit/introduction)
+        4. Helpful link 2: [https://pub.dev/packages/bloc_test](https://pub.dev/packages/bloc_test)
