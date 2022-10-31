@@ -1,3 +1,4 @@
+import 'package:advicer/data/exceptions/exceptions.dart';
 import 'package:advicer/data/models/advice_model.dart';
 import 'package:dio/dio.dart';
 
@@ -18,6 +19,11 @@ class AdviceRemoteDatasourceImpl implements AdviceRemoteDatasource {
   @override
   Future<AdviceModel> getRandomAdviceFromApi() async {
     final response = await _dio.get('/advice');
+
+    if (response.statusCode != 200) {
+      throw ServerException();
+    }
+
     return AdviceModel.fromJson(response.data);
   }
 }
