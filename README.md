@@ -11,6 +11,7 @@ Flutter, BLoC and Clean Architecture. This project is based on [Dart & Flutter -
 5. [DIO](https://pub.dev/packages/dio)
 6. [Get it](https://pub.dev/packages/get_it)
 7. [Test](https://pub.dev/packages/test)
+8. [Mockito](https://pub.dev/packages/mockito)
 
 ## Flutter Testing
 
