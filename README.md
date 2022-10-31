@@ -12,6 +12,7 @@ Flutter, BLoC and Clean Architecture. This project is based on [Dart & Flutter -
 6. [Get it](https://pub.dev/packages/get_it)
 7. [Test](https://pub.dev/packages/test)
 8. [Mockito](https://pub.dev/packages/mockito)
+9. [Build Runner](https://pub.dev/packages/build_runner): Only version 2.3.0 is working for now. (31/10/2022)
 
 ## Flutter Testing
 
